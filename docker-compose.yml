@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  ssm_octopass:
+    build: .
+    ports: 
+      - "2200:22"
+    env_file: .env
+    environment:
+      - SSM_AGENT_CODE
+      - SSM_AGENT_ID
+      - AWS_DEFAULT_REGION
